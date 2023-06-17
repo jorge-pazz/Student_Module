@@ -2,7 +2,7 @@
 O módulo aluno online, permite que a gestão acadêmica realize o cadastro do aluno, visualize os alunos cadastrado, faça a alteração do seu cadastro e a exclusão do aluno.
 
 ### Download
-Caso não queria fazer o passo a passo da instalação basta realizar o download do arquivo ( system.zip ), e rodas o comando na pasta ( api ) ( nodemon server.js ) e na pasta ( app ) ( npm run serve )
+Caso não queria fazer o passo a passo da instalação basta realizar o download do arquivo ( system.zip ), através do link ( https://jorgepaz.com.br/downloads/system.zip ) e rodas o comando na pasta ( api ) ( nodemon server.js ) e na pasta ( app ) ( npm run serve )
 
 ## Instalação
 
