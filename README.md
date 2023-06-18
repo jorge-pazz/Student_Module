@@ -188,3 +188,8 @@ Para realizar a criação do sistema, foi utilizadas as seguintes tech (NODE, VU
 
 <div align="center"><img src="https://jorgepaz.com.br/downloads/imagem/Cadastro_admin.png" /></div>
 
+### V1.1 - Sistema de Busca
+
+<div align="center"><img src="https://jorgepaz.com.br/downloads/imagem/search.png" /></div>
+
+
