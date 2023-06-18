@@ -28,8 +28,8 @@
 
                     <div class="search">
 
-                        <input type="text" placeholder="Digite sua Busca">
-                        <button class="btnSearch">Pesquisar</button>
+                        <input type="text" placeholder="Buscar aluno por CPF" v-model="search">
+                        <button class="btnSearch" @click="filterStudent">Pesquisar</button>
 
                         <div class="contentBtnRegister">
                             <router-link to="/register"><button class="btnRegister">Cadastrar Aluno</button></router-link>
@@ -42,6 +42,15 @@
                    
 
                 </div><!--Fechamento da div SHOWCASE Header-->
+
+
+                <div class="searchStudent">
+
+                        <h3>Resultado da Busca</h3>
+
+                        <ul id="listSearch"></ul>
+
+                </div><!--Fechamento da div SEARCH STUDENT-->
 
                 <div class="showcaseContent">
 
@@ -65,6 +74,24 @@
 
 
 import axios from 'axios';
+
+    function deleteStudentSearch(item){
+                                            
+        let confirmation = confirm("Deseja deletar?");
+
+            if(confirmation){
+                axios.delete("http://localhost:8100/students", { data: { ra: item.getAttribute("data-ra")}})
+                    .then(()=>{
+                            console.log("PT - Foi excluido o aluno com sucesso / EN EN - The student was successfully deleted")
+                            window.location.href = '/';
+                    })
+                    .catch((failed)=>{
+                            console.log("PT - Falha ao excluir o aluno / EN  - Failed to delete student" + failed);
+                            })
+                            }else{
+                                  console.log("PT - Não confirmou a exclusão / EN  - Did not confirm deletion")
+                            }
+                    } 
    
  
 
@@ -76,7 +103,11 @@ import axios from 'axios';
 
             authEmailField: this.authEmailField,
             authPasswordField: this.authPasswordField,
-            axiosConfig : {headers: { authorization: "Bearer " + localStorage.getItem("token") }}
+            axiosConfig : {headers: { authorization: "Bearer " + localStorage.getItem("token") }},
+            search:"",
+            searchResult: "",
+            consultSearch: false,
+            ab: false
         }
     },
 
@@ -199,6 +230,82 @@ import axios from 'axios';
             this.axiosConfig.headers.authorization = "Bearer " + localStorage.removeItem("token");
             window.location.href = '/';
 
+        },
+
+
+        filterStudent: function(){
+
+            if(this.search == "" || this.search == " "){
+                console.log("vazio a busca")
+            }else{
+
+                axios.get("http://localhost:8100/students",this.axiosConfig)
+                    .then((res)=>{
+                        
+                        let filterSearch = res.data;
+
+                        filterSearch.forEach((el)=>{
+
+
+                            if(el.cpf == this.search){
+                                console.log(el.name);
+
+                                if(filterSearch > 0){
+                                let item = document.createElement("li");
+                                    item.innerHTML = `` ;
+                                }
+
+                                let listSearch = document.getElementById("listSearch")
+                                listSearch.innerHTML = '';
+
+                                let item = document.createElement("li");
+                                    item.setAttribute("data-ra", el.ra);
+                                    item.setAttribute("data-name", el.name);
+                                    item.setAttribute("data-email", el.email);
+                                    item.setAttribute("data-cpf",  el.cpf);
+
+                                    item.innerHTML = `<strong> Registro Academico: </strong>   <span class="tablee"> ${el.ra} </span>  | <strong> Nome: </strong>   ${el.name}  | <strong>  CPF: </strong>  ${el.cpf} ` ;
+                                    item.style.cssText = 'color: #333;  border: 1px solid #ccc; padding: 3px 0; margin-bottom: 4px;'
+
+                                    listSearch.appendChild(item)
+
+                                    //UPDATE
+                                    let updateBtn = document.createElement("button");
+                                        updateBtn.innerHTML = "Editar";
+                                        updateBtn.style.cssText = 'margin-right: 5px; margin-left: 5px;'
+                                        item.appendChild(updateBtn);
+
+
+                                        updateBtn.addEventListener("click", function(){
+                                        console.log(item.getAttribute("data-ra"));
+                                        let ra = item.getAttribute("data-ra");                    
+                                        window.location.href = '/update/'+ ra;
+
+                                    })
+
+
+                                         //DELETE
+                                         let deleteBtn = document.createElement("button");
+                                            deleteBtn.innerHTML = 'Excluir';
+                                            item.appendChild(deleteBtn);
+                                            deleteBtn.setAttribute("delete", "Botao delatar aqui");
+
+                                            deleteBtn.addEventListener("click", function(){
+                                                deleteStudentSearch(item)
+                                            })
+                                                                                                    
+
+                            }//END EL
+                           
+                        })
+
+                    })
+                    .catch((failed)=>{
+                        console.log("PT - Falha ao realizar buscar / EN " + failed)
+                    })
+
+            }
+            
         },
            
 
@@ -323,6 +430,12 @@ import axios from 'axios';
     cursor: pointer;
 }
 
+.searchStudent{
+    margin-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+    background-color: antiquewhite;
+}
+
 ul{
     list-style: none;
 }
@@ -330,6 +443,7 @@ ul{
 ul li{
     border: 1px solid #ccc;
 }
+
 
 
 </style>

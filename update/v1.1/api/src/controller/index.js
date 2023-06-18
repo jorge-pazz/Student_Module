@@ -34,6 +34,7 @@ function postStudents(req,res){
 
     let validateEmail = /\S+@\S+\.\S+/;
     let validateCpf = `${cpf}`;
+    let specialCharacter  = /\W|_/;
 
     if(validateEmail.test(email) && validateCpf.length == 11 && !isNaN(validateCpf)){
         modelStudents
@@ -43,7 +44,7 @@ function postStudents(req,res){
         .then((students)=>{
             if(!students){
 
-                if(name == '' || name == ' ' || email == '' || email == ' ' || cpf == '' || cpf == ' ' || isNaN(cpf) || checkerCpf(cpf) == false || checkerEmail.validate(email) == false){
+                if(name == '' || name == ' ' || email == '' || email == ' ' || cpf == '' || cpf == ' ' || isNaN(cpf) || checkerCpf(cpf) == false || checkerEmail.validate(email) == false || specialCharacter.test(name[0]) == true){
                     res.statusCode = 400;
                     res.send("PT - Preencha todos os campos / EN - Fill in all fields");
         
@@ -89,9 +90,12 @@ function putStudents(req,res){
 
     let {ra, name, email, cpf} = req.body;
 
+    let validateEmail = /\S+@\S+\.\S+/;
+    let specialCharacter  = /\W|_/;
+
     parseInt(ra);
 
-    if(name == '' || name == ' ' || email == '' || email == ' '){
+    if(name == '' || name == ' ' || email == '' || email == ' ' || checkerEmail.validate(email) == false || specialCharacter.test(name[0]) == true){
         res.statusCode = 400;
         res.send("PT - Preencha todos os campos corretamente / EN - Complete all the fields correctly");
 
