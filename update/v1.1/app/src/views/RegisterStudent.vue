@@ -68,7 +68,7 @@ export default{
 
                 let specialCharacter  = /\W|_/;
             
-                if(!this.nameField || this.nameField == ' ' || validateEmail.test(this.nameField) == true || specialCharacter.test(this.nameField) == true){
+                if(!this.nameField || this.nameField == ' ' || validateEmail.test(this.nameField) == true || specialCharacter.test(this.nameField[0]) == true){
                     this.msgName = true;
 
                     setTimeout(() => {
