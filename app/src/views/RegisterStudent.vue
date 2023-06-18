@@ -23,6 +23,9 @@
 <script>
 import axios from 'axios';
 import NavBar from '../components/NavBar';
+const checkerCpf = require("validar-cpf");
+
+
 
  
 export default{
@@ -65,7 +68,7 @@ export default{
 
                 let specialCharacter  = /\W|_/;
             
-                if(!this.nameField || this.nameField == ' ' ){
+                if(!this.nameField || this.nameField == ' ' || validateEmail.test(this.nameField) == true || specialCharacter.test(this.nameField[0]) == true){
                     this.msgName = true;
 
                     setTimeout(() => {
@@ -79,7 +82,7 @@ export default{
                         this.msgEmail = false
                     }, 4000);
 
-                }else if(!this.CpfField || this.CpfField  == ' '|| isNaN(this.CpfField) || this.CpfField.length < 11 || specialCharacter.test(this.CpfField) == true){
+                }else if(!this.CpfField || this.CpfField  == ' '|| isNaN(this.CpfField) || this.CpfField.length < 11 || specialCharacter.test(this.CpfField) == true || checkerCpf(this.CpfField) == false){
                     this.msgCpf = true;
 
                     setTimeout(() => {
