@@ -60,7 +60,7 @@ function postStudents(req,res){
                 })
                 .then(()=>{
                     res.statusCode = 200;
-                    res.send("PT - Cadastro do aluno realizado com sucesso / EN - Student registration completed successfully");
+                    res.send("PT - Cadastro do aluno realizado com sucesso / EN - Students registration completed successfully");
                 })
                 .catch((failed)=>{
                     res.statusCode = 400;
