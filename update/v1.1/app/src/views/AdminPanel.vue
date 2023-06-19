@@ -216,6 +216,7 @@ import axios from 'axios';
                     this.axiosConfig.headers.authorization = "Bearer " + localStorage.getItem("token");
                     window.location.href = '/';
                     console.log(token);
+                    alert("PT - Logado com sucesso / EN - Logged in successfully ")
                 })
                 .catch(()=>{
                     alert("PT - Falha ao realizar o login / EN Failed to login ")
