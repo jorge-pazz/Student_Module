@@ -3,6 +3,8 @@ O módulo aluno online, permite que a gestão acadêmica realize o cadastro do a
 
 ### Download
 
+A versão 1.1 encontra-se mais atual e com novas fucionalidades.
+
 - Nesse passo também necessita instalar o banco de dados MYSQL e criar um banco com o nome ( students ).
 
 Caso não queria fazer o clonar o repositório basta realizar o download do arquivo ( system.zip ), através do link ( https://jorgepaz.com.br/downloads/system.zip ) e roda o comando na pasta ( api - npm install e npm install -g nodemon ) e depois ( nodemon server.js e) e na pasta ( app - npm install e npm install validar-cpf ) e depois ( npm run serve )
@@ -169,6 +171,63 @@ Caso esse status aconteca ocorreu um erro ao realizar a exclusão!
 
 <div align="center"><img src="https://jorgepaz.com.br/downloads/imagem/400_delete.png" /></div>
 
+### POST URL/students/record
+
+Esse endpoint é responsavél por ( cadastrar ) usuário administrador que pode manipular os dados dos alunos no banco de dados.
+
+#### Parâmetros
+email, password
+
+´´´
+{
+
+    "email": "santos@hotmail.com",
+    "password": "admin123"
+
+}
+
+´´´
+
+##### OK | 200
+Caso esse status acontece o usuário administrador estará cadastrado com sucesso.
+
+##### Bad Request | 400
+Caso esse status aconteca ocorreu um erro ao cadastrar !
+
+<div align="center"><img src="https://jorgepaz.com.br/downloads/imagem/400_get.png" /></div>
+
+
+### POST URL/students/auth
+
+Esse endpoint é responsavél por ( logar ) usuário administrador que pode manipular os dados dos alunos no banco de dados.
+
+#### Parâmetros
+email, password
+
+´´´
+{
+
+    "email": "santos@hotmail.com",
+    "password": "admin123"
+
+}
+
+´´´
+
+##### OK | 200
+Caso esse status acontece o usuário administrador estará logado com sucesso para manipular os dados dos alunos!
+Dessa forma o token é gerado
+
+##### Bad Request | 401
+Caso esse status aconteca email ou password está invalido.
+
+
+##### Bad Request | 400
+Caso esse status aconteca ocorreu um erro ao logar
+
+<div align="center"><img src="https://jorgepaz.com.br/downloads/imagem/400_get.png" /></div>
+
+
 ## Testes
 Caso queira realizar algum teste automatizado nas rotas, basta tirar o Middleware das rotas
 
@@ -183,7 +242,7 @@ Para realizar teste automatizado basta abrir o terminal no diretorio raiz da pas
 ## Tecnologia
 
 Para realizar a criação do sistema, foi utilizadas as seguintes tech (NODE, VUE), com suas seguintes dependências (Express, Nodemon, BodyParser, Sequelize, MYSQL, Jest, cors, Bulma, JWT).
- - Para atualização futuras pode ser utiliza ostras dependências como ( Bcrypt, Knex, Cookie Parser, mongo(mongoose) ).
+ - Para atualização futuras pode utiliza outras dependências como ( Bcrypt(criptografia), Knex, Cookie Parser, mongo(mongoose) ).
 
 ## Screenshot
 
