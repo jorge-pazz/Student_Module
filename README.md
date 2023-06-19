@@ -5,7 +5,7 @@ O módulo aluno online, permite que a gestão acadêmica realize o cadastro do a
 
 - Nesse passo também necessita instalar o banco de dados MYSQL e criar um banco com o nome ( students ).
 
-Caso não queria fazer o clonar o repositório basta realizar o download do arquivo ( system.zip ), através do link ( https://jorgepaz.com.br/downloads/system.zip ) e roda o comando na pasta ( api - npm install ) e depois ( nodemon server.js ) e na pasta ( app - npm install ) e depois ( npm run serve )
+Caso não queria fazer o clonar o repositório basta realizar o download do arquivo ( system.zip ), através do link ( https://jorgepaz.com.br/downloads/system.zip ) e roda o comando na pasta ( api - npm install e npm install -g nodemon ) e depois ( nodemon server.js e) e na pasta ( app - npm install ) e depois ( npm run serve )
 
 ## Instalação
 
@@ -23,7 +23,7 @@ Caso não queria fazer o clonar o repositório basta realizar o download do arqu
 <div align="center"><img src="https://jorgepaz.com.br/downloads/imagem/config_db.png" /></div>
 
 #### Configurando API
-1 - Depois que realizou a instalação e configuração do banco de dados, abra a pasta da API através do terminal e em seguida rode o comando ( npm install ) para baixar todas as dependências utilizadas.
+1 - Depois que realizou a instalação e configuração do banco de dados, abra a pasta da API através do terminal e em seguida rode o comando ( api - npm install e npm install -g nodemon) para baixar todas as dependências utilizadas.
 
 <div align="center"><img src="https://jorgepaz.com.br/downloads/imagem/npmInstall_api.png" /></div>
 
