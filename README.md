@@ -7,7 +7,7 @@ A versão 1.1 encontra-se mais atual e com novas fucionalidades.
 
 - Nesse passo também necessita instalar o banco de dados MYSQL e criar um banco com o nome ( students ).
 
-Caso não queria fazer o clonar o repositório basta realizar o download do arquivo ( system.zip ), através do link ( https://jorgepaz.com.br/downloads/system.zip ) e roda o comando na pasta ( api ) - ( npm install e npm install -g nodemon ) e depois ( nodemon server.js e) e na pasta ( app ) - ( npm install e npm install validar-cpf ) e depois ( npm run serve )
+Caso não queria fazer o clonar o repositório basta realizar o download do arquivo ( system.zip ), através do link ( https://jorgepaz.com.br/downloads/system.zip ) e roda o comando na pasta ( api ) - ( npm install e npm install -g nodemon ) e depois ( nodemon server.js ) e na pasta ( app ) - ( npm install e npm install validar-cpf ) e depois ( npm run serve )
 
 ## Instalação
 
