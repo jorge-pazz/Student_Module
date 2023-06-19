@@ -191,8 +191,10 @@ email, password
 ##### OK | 200
 Caso esse status acontece o usuário administrador estará cadastrado com sucesso.
 
+<div align="center"><img src="https://jorgepaz.com.br/downloads/imagem/record_200.png" /></div>
+
 ##### Bad Request | 400
-Caso esse status aconteca ocorreu um erro ao cadastrar !
+Caso esse status aconteca ocorreu um erro ao cadastrar email ou senha invalido!
 
 <div align="center"><img src="https://jorgepaz.com.br/downloads/imagem/400_get.png" /></div>
 
@@ -218,9 +220,11 @@ email, password
 Caso esse status acontece o usuário administrador estará logado com sucesso para manipular os dados dos alunos!
 Dessa forma o token é gerado
 
-##### Bad Request | 401
-Caso esse status aconteca email ou password está invalido.
+<div align="center"><img src="https://jorgepaz.com.br/downloads/imagem/auth_200.png" /></div>
 
+##### Bad Request | 404
+Caso esse status aconteca email ou password está invalido.
+<div align="center"><img src="https://jorgepaz.com.br/downloads/imagem/auth_404.png" /></div>
 
 ##### Bad Request | 400
 Caso esse status aconteca ocorreu um erro ao logar
@@ -242,7 +246,7 @@ Para realizar teste automatizado basta abrir o terminal no diretorio raiz da pas
 ## Tecnologia
 
 Para realizar a criação do sistema, foi utilizadas as seguintes tech (NODE, VUE), com suas seguintes dependências (Express, Nodemon, BodyParser, Sequelize, MYSQL, Jest, cors, Bulma, JWT).
- - Para atualização futuras pode utiliza outras dependências como ( Bcrypt(criptografia), Knex, Cookie Parser, mongo(mongoose) ).
+ - Para atualização futuras pode utiliza outras dependências como ( Bcrypt(criptografia), Knex, Cookie Parser, mongo(mongoose) ), restringir acesso por setorr administrativo ex: Módulo aluno, Módulo financeiro.
 
 ## Screenshot
 
