@@ -231,6 +231,10 @@ Caso esse status aconteca ocorreu um erro ao logar
 
 <div align="center"><img src="https://jorgepaz.com.br/downloads/imagem/400_get.png" /></div>
 
+## Token
+Caso deseje alterar o tempo que expira o token basta acessa a pasta ( API ) depois os diretório ( src/controller/admin ) e acesse o arquivo ( index.js ), encontrar ( JWT.sign ), então basta colocar o tempo desejado.
+
+<div align="center"><img src="https://jorgepaz.com.br/downloads/imagem/tempo_token.png" /></div>
 
 ## Testes
 Caso queira realizar algum teste automatizado nas rotas, basta tirar o Middleware das rotas
