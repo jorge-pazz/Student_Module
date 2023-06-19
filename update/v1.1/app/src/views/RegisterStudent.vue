@@ -9,7 +9,7 @@
         <span v-if="msgName == true" class="showmsg">Nome inválido</span>
         <input type="text" name="name" id="name" placeholder="Informe seu email" v-model="EmailField">
         <span v-if="msgEmail == true" class="showmsg">Email inválido</span>
-        <input type="text" name="name" id="name" placeholder="Seu RA completo" value="*****" disabled>
+        <input type="text" name="name" id="name" placeholder="Seu RA completo" value="RA - ****" disabled>
         <input type="text" name="name" id="name" placeholder="Informe seu CPF" v-model="CpfField" maxlength="11">
         <span v-if="msgCpf == true" class="showmsg">CPF inválido</span>
         <span v-if="showmsg == true">Cadastrado com sucesso</span>

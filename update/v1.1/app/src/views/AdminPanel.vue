@@ -15,7 +15,7 @@
                 <h4>Consulta de Alunos</h4>
 
                 <div class="login">
-                    <span>Login: </span>
+                    <span>Login Administrativo: </span>
                     <input type="text" name="jwtEmail" id="jwtEmail" placeholder="Digite seu Email!" v-model="authEmailField">
                     <input type="text" name="jwtPassword" id="jwtPassword" placeholder="Digite seu senha" v-model="authPasswordField">
                     <button class="btnSearch" @click="login">Logar</button>
@@ -228,6 +228,7 @@ import axios from 'axios';
 
         logout: function(){
 
+            alert("PT - Deslogado com sucesso / EN - Logged out successfully ")
             this.axiosConfig.headers.authorization = "Bearer " + localStorage.removeItem("token");
             window.location.href = '/';
 
