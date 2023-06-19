@@ -19,7 +19,7 @@
                     <input type="text" name="jwtEmail" id="jwtEmail" placeholder="Digite seu Email!" v-model="authEmailField">
                     <input type="text" name="jwtPassword" id="jwtPassword" placeholder="Digite seu senha" v-model="authPasswordField">
                     <button class="btnSearch" @click="login">Logar</button>
-                    <router-link to="/studentLogin"><button class="btnAdminRegistration"> Faça seu Cadastro</button></router-link> 
+                    <router-link to="/studentLogin"><button class="btnAdminRegistration">Cadastro administrador</button></router-link> 
                     <button class="Logout" @click="logout">Logout</button>
                 </div><!--Fechamento da DIV Login-->
 
