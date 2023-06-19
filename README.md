@@ -4,7 +4,7 @@ O módulo aluno online, permite que a gestão acadêmica realize o cadastro do a
 ### Download
 
 - Nesse passo também necessita instalar o banco de dados MYSQL e criar um banco com o nome ( students ). 
-Caso não queria fazer o passo a passo da instalação basta realizar o download do arquivo ( system.zip ), através do link ( https://jorgepaz.com.br/downloads/system.zip ) e roda o comando na pasta ( api ) ( nodemon server.js ) e na pasta ( app ) ( npm run serve )
+Caso não queria fazer o passo a passo da instalação basta realizar o download do arquivo ( system.zip ), através do link ( https://jorgepaz.com.br/downloads/system.zip ) e roda o comando na pasta ( api - npm install ) e depois ( nodemon server.js ) e na pasta ( app - npm install ) e depois ( npm run serve )
 
 ## Instalação
 
