@@ -5,7 +5,8 @@ O módulo aluno online, permite que a gestão acadêmica realize o cadastro do a
 
 ### Download
 
-A versão 1.2 encontra-se mais atual e com novas fucionalidades (Alertas, Style e criptografia).
+<strong><h3>Nova versão v1.2 da aplicação</h3> </strong> encontra-se mais atual e com novas fucionalidades (Alertas, Style e criptografia).
+<div align="center"><img src="https://jorgepaz.com.br/downloads/imagem/nova_versao1_2.png" /></div>
 
 - Nesse passo também necessita instalar o banco de dados MYSQL e criar um banco com o nome ( students ).
 
@@ -252,9 +253,11 @@ Para realizar teste automatizado basta abrir o terminal no diretorio raiz da pas
 ## Tecnologia
 
 Para realizar a criação do sistema, foi utilizadas as seguintes tech (NODE, VUE), com suas seguintes dependências (Express, Nodemon, BodyParser, Sequelize, MYSQL, Jest, cors, Bulma, JWT).
- - Para atualização futuras pode utiliza outras dependências como ( Bcrypt(criptografia), Knex, Cookie Parser, mongo(mongoose) ), restringir acesso por setorr administrativo ex: Módulo aluno, Módulo financeiro.
+ - Para atualização futuras pode utiliza outras dependências como ( Bcrypt(criptografia) - Já implementada na versão v1.2, Knex, Cookie Parser, mongo(mongoose) ), restringir acesso por setorr administrativo ex: Módulo aluno, Módulo financeiro.
 
 ## Screenshot
+
+### v1.0 
 
 <div align="center"><img src="https://jorgepaz.com.br/downloads/imagem/home.png" /></div>
 
@@ -266,4 +269,6 @@ Para realizar a criação do sistema, foi utilizadas as seguintes tech (NODE, VU
 
 <div align="center"><img src="https://jorgepaz.com.br/downloads/imagem/search.png" /></div>
 
+### v1.2 - Sistema de Busca
 
+<div align="center"><img src="https://jorgepaz.com.br/downloads/imagem/versao1_2.png" /></div>
