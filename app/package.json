@@ -11,8 +11,6 @@
     "axios": "^1.4.0",
     "bulma": "^0.9.4",
     "core-js": "^3.8.3",
-    "email-validator": "^2.0.4",
-    "validar-cpf": "^3.0.0",
     "vue": "^3.2.13",
     "vue-router": "^4.0.3"
   },

@@ -83,7 +83,7 @@ export default{
                                 let validateEmail = /\S+@\S+\.\S+/;
                                 let specialCharacter  = /\W|_/;
             
-                                    if(!editName.value || editName.value == ' ' || validateEmail.test(editName) == true || specialCharacter.test(editName[0]) == true ){
+                                    if(!editName.value || editName.value == ' ' ){
                                         this.msgName = true;
 
                                         setTimeout(() => {
