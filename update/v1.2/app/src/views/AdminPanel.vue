@@ -217,9 +217,9 @@ import axios from 'axios';
                     let token = res.data.token;
                     localStorage.setItem("token",token);
                     this.axiosConfig.headers.authorization = "Bearer " + localStorage.getItem("token");
-                    window.location.href = '/';
-                    console.log(token);
                     alert("PT - Logado com sucesso / EN - Logged in successfully ")
+                    window.location.href = '/';
+                    console.log(token);                    
                 })
                 .catch(()=>{
                     alert("PT - Falha ao realizar o login / EN Failed to login ")
@@ -241,7 +241,7 @@ import axios from 'axios';
         filterStudent: function(){
 
             if(this.search == "" || this.search == " "){
-                console.log("vazio a busca")
+                console.log("PT - Nenhum resultado na busca / EN - Not search results")
                 this.consultSearch = true;
 
                 setTimeout(() => {
@@ -307,18 +307,15 @@ import axios from 'axios';
                                             })
                                                                                                     
 
-                            }else{
-                                this.consultSearch = true;
-                                setTimeout(() => {
-                                    this.consultSearch = false
-                                }, 3000);
+                            }else{                                
+                                console.log("PT - Falha ao realizar buscar / EN - Failed to perform search");
                             }//END else EL
                            
                         })
 
                     })
                     .catch((failed)=>{
-                        console.log("PT - Falha ao realizar buscar / EN " + failed)
+                        console.log("PT - Falha ao realizar buscar / EN - Failed to perform search " + failed)
                     })
 
             }
