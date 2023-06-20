@@ -5,7 +5,7 @@ O módulo aluno online, permite que a gestão acadêmica realize o cadastro do a
 
 ### Download
 
-A versão 1.1 encontra-se mais atual e com novas fucionalidades.
+A versão 1.2 encontra-se mais atual e com novas fucionalidades (Alertas, Style e criptografia).
 
 - Nesse passo também necessita instalar o banco de dados MYSQL e criar um banco com o nome ( students ).
 
