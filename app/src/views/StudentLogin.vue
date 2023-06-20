@@ -90,8 +90,9 @@ export default{
         let passwordAuth = this.passwordAuthField;
 
         let validateEmail = /\S+@\S+\.\S+/;
+        const specialCharacter = /\W|_/;
         
-        if(emailAuth == "" || emailAuth == " " || validateEmail.test(emailAuth) == false){
+        if(emailAuth == "" || emailAuth == " " || validateEmail.test(emailAuth) == false || specialCharacter.test(emailAuth[0]) == true){
             console.log("PT - Email inválido / EN Invalid email"); 
             this.msgShowEmail = true; 
            
@@ -103,6 +104,8 @@ export default{
         }else{
 
         
+
+            ///
             let authEmailSenha = {
                     email: emailAuth,
                     password : passwordAuth
@@ -111,7 +114,8 @@ export default{
             axios.post("http://localhost:8100/students/record",authEmailSenha)
                 .then(()=>{
                     console.log("PT - Cadastrado com Sucesso / EN Registered successfully");
-                   window.location.href = '/';
+                    alert("PT - Cadastrado com Sucesso / EN Registered successfully")
+                    window.location.href = '/';
                 })
                 .catch((failed)=>{
                     console.log("PT - Falha ao Cadastrar / EN Failed to Register " + failed)
@@ -127,6 +131,8 @@ export default{
             setTimeout(() => {
                     this.msgShowEmail = false
                 }, 3000);
+
+            ///     
 
         }
 
