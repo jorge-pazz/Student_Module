@@ -269,6 +269,6 @@ Para realizar a criação do sistema, foi utilizadas as seguintes tech (NODE, VU
 
 <div align="center"><img src="https://jorgepaz.com.br/downloads/imagem/search.png" /></div>
 
-### v1.2 - Sistema de Busca
+### v1.2 - Alertas, Style e criptografia
 
 <div align="center"><img src="https://jorgepaz.com.br/downloads/imagem/versao1_2.png" /></div>
