@@ -5,7 +5,7 @@ O módulo aluno online, permite que a gestão acadêmica realize o cadastro do a
 
 ### Download
 
-<strong><h3>Nova versão v1.2.1</h3> </strong> encontra-se mais atual e com novas fucionalidades (Alertas, Style, criptografia e autenticação).
+<strong><h3>Nova versão v1.2.1</h3> </strong> encontra-se mais atual e com novas fucionalidades (Alertas, Style, criptografia).
 <div align="center"><img src="https://jorgepaz.com.br/downloads/imagem/nova_versao1_2.png" /></div>
 
 - Nesse passo também necessita instalar o banco de dados MYSQL e criar um banco com o nome ( students ).
