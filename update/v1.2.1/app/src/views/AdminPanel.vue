@@ -223,7 +223,7 @@ import axios from 'axios';
                     let token = res.data.token;
                     localStorage.setItem("token",token);
                     this.axiosConfig.headers.authorization = "Bearer " + localStorage.getItem("token");
-                    alert("PT - Logado com sucesso / EN - Logged in successfully ")
+                    alert("PT - Logado com sucesso / EN - Logged in successfully ");                  
                     window.location.href = '/';
                     console.log(token);                    
                 })
@@ -414,6 +414,10 @@ import axios from 'axios';
     
 }
 
+.search input {
+    padding: 5px 5px;
+}
+
 .btnSearch{
     padding: 5px 5px;
     color: #fff;    
@@ -459,9 +463,14 @@ import axios from 'axios';
     color: #777;
 }
 
+.login input{
+    padding: 4px;
+}
+
 .btnLogin{
     color: #FFF;
-    padding: 3px 7px;
+    margin-left: 2px;
+    padding: 6px 7px;
     border: 0;
     cursor: pointer;
     background-color: #5C5CCC;
@@ -477,7 +486,7 @@ import axios from 'axios';
     border: 1px solid #D3334B;
     border-radius: 5px;
     color: #FFF;
-    padding: 3px 6px;
+    padding: 4px 7px;
     cursor: pointer;
 }
 
