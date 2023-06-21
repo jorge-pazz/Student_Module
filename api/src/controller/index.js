@@ -48,7 +48,7 @@ function postStudents(req,res){
         
             }else if(name == undefined || email == undefined || cpf == undefined || undefined){
                      res.statusCode = 400;
-                     res.send("PT - Preencha todos os campos / EN - Fill in all fields");
+                     res.send("PT - Preencha todos os campos corretamente / EN - Complete all the fields correctly");
         
             }else{
                     
