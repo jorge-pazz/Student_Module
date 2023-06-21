@@ -1,0 +1,2 @@
+- Melhorando a autenticação da API e APP
+- Limitando acesso
