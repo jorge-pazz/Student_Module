@@ -32,7 +32,7 @@
             <div class="card-footer">
 
 
-                <button @click="auth()" class="submit">Logar</button>
+                <button @click="auth()" class="submit">Cadastrar</button>
 
                 <ul id="list" style="display:none;"></ul>
 
@@ -118,6 +118,7 @@ export default{
                     window.location.href = '/';
                 })
                 .catch((failed)=>{
+                    alert("PT - Email já cadastrado / EN - E-mail already registered")
                     console.log("PT - Falha ao Cadastrar / EN Failed to Register " + failed)
                 })   
 

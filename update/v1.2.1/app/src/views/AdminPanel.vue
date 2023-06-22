@@ -28,7 +28,7 @@
 
                     <div class="search">
 
-                        <input type="text" placeholder="Buscar aluno por CPF" v-model="search"  v-if="showStudentRegistration == true">
+                        <input type="text" placeholder="Buscar aluno por CPF" v-model="search"  v-if="showStudentRegistration == true" maxlength="11">
                         <button class="btnSearch" @click="filterStudent" v-if="showStudentRegistration == true" >Pesquisar</button>
 
                         <div class="contentBtnRegister">

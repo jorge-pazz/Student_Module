@@ -125,14 +125,14 @@ function record(req,res){
                     res.send("PT - Cadastrado com Sucesso / EN - Registered successfully");
                 })
                 .catch((failed)=>{
-                    statusCode = 400;
+                    res.statusCode = 400;
                     res.send("PT - Falha ao cadastrar / EN - failed to register")
                 })
                 
             }
 
         }else{
-            statusCode = 400;
+            res.statusCode = 400;
             res.send("PT - Usuário já cadastrado / EN - User already registered ")
         }
 
