@@ -114,7 +114,7 @@ export default{
             axios.post("http://localhost:8100/students/record",authEmailSenha)
                 .then(()=>{
                     console.log("PT - Cadastrado com Sucesso / EN Registered successfully");
-                    alert("PT - Cadastrado com Sucesso / EN Registered successfully")
+                    alert("PT - Cadastrado com Sucesso! / EN Registered successfully!")
                     window.location.href = '/';
                 })
                 .catch((failed)=>{
