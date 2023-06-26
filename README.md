@@ -253,7 +253,7 @@ Para realizar teste automatizado basta abrir o terminal no diretorio raiz da pas
 ## Tecnologia
 
 Para realizar a criação do sistema, foi utilizadas as seguintes tech (NODE, VUE), com suas seguintes dependências (Express, Nodemon, BodyParser, Sequelize, MYSQL, Jest, cors, Bulma, JWT).
- - Para atualização futuras pode utiliza outras dependências como ( Bcrypt(criptografia) - Já implementada na versão v1.2, Knex, Cookie Parser, mongo(mongoose) ), restringir acesso por setorr administrativo ex: Módulo aluno, Módulo financeiro.
+ - Para atualização futuras pode utiliza outras dependências como ( Bcrypt(criptografia) - Já implementada na versão v1.2, (Envio de email) - Já implementada na versão v1.2.2, Knex, Cookie Parser, mongo(mongoose) ), restringir acesso por setorr administrativo ex: Módulo aluno, Módulo financeiro.
 
 ## Screenshot
 
