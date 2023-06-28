@@ -66,7 +66,7 @@ Caso esse status acontece você irá obter a listagem de todos os Alunos cadastr
 <div align="center"><img src="https://jorgepaz.com.br/downloads/imagem/200_get.png" /></div>
 
 ##### Não Encontrado | 401
-Caso esse status acontece significa que precisa see autenticar para realizar a consulta
+Caso esse status acontece significa que precisa se autenticar para realizar a consulta
 
 <div align="center"><img src="https://jorgepaz.com.br/downloads/imagem/falha_401_get.png" /></div>
 
